@@ -5,8 +5,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+            "Php\\Project\\45\\": "src"
+        },
+        "files": ["src/Cli.php"]
     },
     "authors": [
         {
@@ -16,5 +17,7 @@
     ],
     "description": "kirasan brain-games",
     "license": "proprietary",
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.18"
+    }
 }
