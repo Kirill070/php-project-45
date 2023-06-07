@@ -4,3 +4,4 @@
 [Запись примера игры "Проверка на четность"](https://asciinema.org/a/kcDHNqyWRjF3UcjGLKErHaCjO)<br>
 [Запись примера игры "Калькулятор"](https://asciinema.org/a/KlJJM48p5h9rGgza1kZNBfwph)<br>
 [Запись примера игры "НОД"](https://asciinema.org/a/2Nk5RC2QLCk0FGdWWCpkposXM)<br>
+[Запись примера игры "Арифметическая прогрессия"](https://asciinema.org/a/3nByU7TZo4tLdx5v4To6JpImI)<br>
