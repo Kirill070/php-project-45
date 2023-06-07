@@ -34,7 +34,7 @@ function makeTask(): array
 
 function runGameProg()
 {
-    $description = 'Find the greatest common divisor of given numbers.';
+    $description = 'What number is missing in the progression?';
 
     $name = greeting($description);
 
