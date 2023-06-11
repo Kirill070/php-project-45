@@ -4,7 +4,6 @@ namespace Hexlet\Code\Even;
 
 use function cli\line;
 use function cli\prompt;
-use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';

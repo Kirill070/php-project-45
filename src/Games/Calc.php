@@ -4,7 +4,6 @@ namespace Hexlet\Code\Calc;
 
 use function cli\line;
 use function cli\prompt;
-use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
 const DESCRIPTION = 'What is the result of the expression?';

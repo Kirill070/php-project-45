@@ -4,7 +4,6 @@ namespace Hexlet\Code\Gcd;
 
 use function cli\line;
 use function cli\prompt;
-use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
