@@ -7,28 +7,38 @@ use function cli\prompt;
 use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
-function makeTask(): array
+function isPrime(int $num): bool
 {
-    $num1 = rand(1, 99);
-    $num2 = rand(1, 99);
-
-    $question = "{$num1} {$num2}";
-    while ($num1 !== $num2) {
-        if ($num1 > $num2) {
-            $num1 -= $num2;
-        } else {
-            $num2 -= $num1;
+    if ($num < 2) {
+        return false;
+    }
+    for ($i = 2; $i <= $num / 2; $i++) {
+        if ($num % $i === 0) {
+            return false;
         }
     }
-    $trueAnswer = $num1;
+    return true;
+}
 
+function makeTask(): array
+{
+    $num = rand(2, 1000);
+
+    $question = $num;
+
+    if (isPrime($num) === true) {
+        $trueAnswer = 'yes';
+    } else {
+        $trueAnswer = 'no';
+    }
+    
     $trueAnswer = (string) $trueAnswer;
     $result = [$question, $trueAnswer];
 
     return $result;
 }
 
-function runGameGcd()
+function runGamePrime()
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

@@ -19,7 +19,7 @@
             "src/Games/Calc.php",
             "src/Games/Gcd.php",
             "src/Games/Progression.php",
-            "src/Gemes/Prime.php"
+            "src/Games/Prime.php"
         ]
     },
     "authors": [
