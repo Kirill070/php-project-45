@@ -19,13 +19,13 @@ function makeTask(): array
     }
 
     $rndNum = rand(0, count($array) - 1);
-    
+
     $trueAnswer = $array[$rndNum];
-    
+
     $array[$rndNum] = '..';
 
-    $question = implode(' ',$array);
-    
+    $question = implode(' ', $array);
+
     $trueAnswer = (string) $trueAnswer;
     $result = [$question, $trueAnswer];
 

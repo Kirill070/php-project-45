@@ -31,7 +31,7 @@ function makeTask(): array
     } else {
         $trueAnswer = 'no';
     }
-    
+
     $trueAnswer = (string) $trueAnswer;
     $result = [$question, $trueAnswer];
 
