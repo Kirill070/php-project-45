@@ -40,12 +40,12 @@ function runGameCalc()
 
     $name = greeting($description);
 
+    $result = 'Congratulations, ' . $name . '!';
+
     for ($i = 0; $i < 3; $i++) {
         $task = makeTask();
-        $result = playGame($name, $task);
-        if ($result === true) {
-            $result = 'Congratulations, ' . $name . '!';
-        } else {
+        $gameResult = playGame($name, $task);
+        if ($gameResult !== true) {
             $result = "Let's try again, " . $name . '!';
             break;
         }
