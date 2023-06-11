@@ -7,6 +7,8 @@ use function cli\prompt;
 use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
+const DESCRIPTION = 'What is the result of the expression?';
+
 function makeTask(): array
 {
     $num1 = rand(1, 99);
@@ -36,9 +38,7 @@ function makeTask(): array
 
 function runGameCalc()
 {
-    $description = 'What is the result of the expression?';
-
-    $name = greeting($description);
+    $name = greeting(DESCRIPTION);
 
     $result = 'Congratulations, ' . $name . '!';
 

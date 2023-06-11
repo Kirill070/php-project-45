@@ -7,6 +7,8 @@ use function cli\prompt;
 use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
+const DESCRIPTION = 'What number is missing in the progression?';
+
 function makeTask(): array
 {
     $firstNum = rand(1, 10);
@@ -34,9 +36,7 @@ function makeTask(): array
 
 function runGameProg()
 {
-    $description = 'What number is missing in the progression?';
-
-    $name = greeting($description);
+    $name = greeting(DESCRIPTION);
 
     $result = 'Congratulations, ' . $name . '!';
 

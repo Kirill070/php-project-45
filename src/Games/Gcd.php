@@ -7,6 +7,8 @@ use function cli\prompt;
 use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
+
 function makeTask(): array
 {
     $num1 = rand(1, 99);
@@ -30,9 +32,7 @@ function makeTask(): array
 
 function runGameGcd()
 {
-    $description = 'Find the greatest common divisor of given numbers.';
-
-    $name = greeting($description);
+    $name = greeting(DESCRIPTION);
 
     $result = 'Congratulations, ' . $name . '!';
 

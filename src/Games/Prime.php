@@ -7,6 +7,8 @@ use function cli\prompt;
 use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function isPrime(int $num): bool
 {
     if ($num < 2) {
@@ -39,9 +41,7 @@ function makeTask(): array
 
 function runGamePrime()
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-    $name = greeting($description);
+    $name = greeting(DESCRIPTION);
 
     $result = 'Congratulations, ' . $name . '!';
 

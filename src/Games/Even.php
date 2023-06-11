@@ -7,6 +7,8 @@ use function cli\prompt;
 use function Hexlet\Code\Engine\greeting;
 use function Hexlet\Code\Engine\playGame;
 
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function makeTask(): array
 {
     $num = rand(1, 99);
@@ -22,9 +24,7 @@ function makeTask(): array
 
 function runGameEven()
 {
-    $description = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-    $name = greeting($description);
+    $name = greeting(DESCRIPTION);
 
     $result = 'Congratulations, ' . $name . '!';
 
