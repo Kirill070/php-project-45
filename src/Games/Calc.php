@@ -40,16 +40,16 @@ function runGameCalc()
 {
     $name = greeting(DESCRIPTION);
 
-    $result = 'Congratulations, ' . $name . '!';
+    $resultGameCalc = 'Congratulations, ' . $name . '!';
 
     for ($i = 0; $i < 3; $i++) {
         $task = makeTask();
         $gameResult = playGame($name, $task);
         if ($gameResult !== true) {
-            $result = "Let's try again, " . $name . '!';
+            $resultGameCalc = "Let's try again, " . $name . '!';
             break;
         }
     }
 
-    line($result);
+    line($resultGameCalc);
 }
