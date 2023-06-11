@@ -42,9 +42,9 @@ function runGameProg()
         $task = makeTask();
         $result = playGame($name, $task);
         if ($result === true) {
-            $result = 'Congratulations, ' . $name;
+            $result = 'Congratulations, ' . $name . '!';
         } else {
-            $result = "Let's try again, " . $name;
+            $result = "Let's try again, " . $name . '!';
             break;
         }
     }
