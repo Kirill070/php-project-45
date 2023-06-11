@@ -32,7 +32,6 @@ function makeTask(): array
         $trueAnswer = 'no';
     }
 
-    $trueAnswer = (string) $trueAnswer;
     $result = [$question, $trueAnswer];
 
     return $result;

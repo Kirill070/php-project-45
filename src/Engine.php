@@ -5,7 +5,7 @@ namespace Hexlet\Code\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function greeting($greeting)
+function greeting(string $greeting)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');

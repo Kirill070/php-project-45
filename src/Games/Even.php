@@ -15,7 +15,6 @@ function makeTask(): array
 
     $trueAnswer = ($num % 2 === 0) ? 'yes' : 'no';
 
-    $trueAnswer = (string) $trueAnswer;
     $result = [$question, $trueAnswer];
 
     return $result;
