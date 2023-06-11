@@ -9,45 +9,30 @@ use function Hexlet\Code\Engine\playGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function makeTask(): array
-{
-    $firstNum = rand(1, 10);
-    $array = [$firstNum];
-    $step = rand(1, 5);
-    $arraySize = rand(4, 9);
-
-    for ($i = 0; $i < $arraySize; $i++) {
-        $array[] = $array[$i] + $step;
-    }
-
-    $rndNum = rand(0, count($array) - 1);
-
-    $trueAnswer = $array[$rndNum];
-
-    $array[$rndNum] = '..';
-
-    $question = implode(' ', $array);
-
-    $trueAnswer = (string) $trueAnswer;
-    $result = [$question, $trueAnswer];
-
-    return $result;
-}
-
 function runGameProg()
 {
-    $name = greeting(DESCRIPTION);
+    $task = function () {
+        $firstNum = rand(1, 10);
+        $array = [$firstNum];
+        $step = rand(1, 5);
+        $arraySize = rand(4, 9);
 
-    $result = 'Congratulations, ' . $name . '!';
-
-    for ($i = 0; $i < 3; $i++) {
-        $task = makeTask();
-        $gameResult = playGame($name, $task);
-        if ($gameResult !== true) {
-            $result = "Let's try again, " . $name . '!';
-            break;
+        for ($i = 0; $i < $arraySize; $i++) {
+            $array[] = $array[$i] + $step;
         }
-    }
 
-    line($result);
+        $rndNum = rand(0, count($array) - 1);
+
+        $trueAnswer = $array[$rndNum];
+
+        $array[$rndNum] = '..';
+
+        $question = implode(' ', $array);
+
+        $trueAnswer = (string) $trueAnswer;
+
+        return [$question, $trueAnswer];
+    };
+
+    playGame(DESCRIPTION, $task);
 }

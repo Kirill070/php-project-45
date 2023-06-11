@@ -9,41 +9,26 @@ use function Hexlet\Code\Engine\playGame;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function makeTask(): array
-{
-    $num1 = rand(1, 99);
-    $num2 = rand(1, 99);
-
-    $question = "{$num1} {$num2}";
-    while ($num1 !== $num2) {
-        if ($num1 > $num2) {
-            $num1 -= $num2;
-        } else {
-            $num2 -= $num1;
-        }
-    }
-    $trueAnswer = $num1;
-
-    $trueAnswer = (string) $trueAnswer;
-    $result = [$question, $trueAnswer];
-
-    return $result;
-}
-
 function runGameGcd()
 {
-    $name = greeting(DESCRIPTION);
+    $task = function () {
+        $num1 = rand(1, 99);
+        $num2 = rand(1, 99);
 
-    $result = 'Congratulations, ' . $name . '!';
-
-    for ($i = 0; $i < 3; $i++) {
-        $task = makeTask();
-        $gameResult = playGame($name, $task);
-        if ($gameResult !== true) {
-            $result = "Let's try again, " . $name . '!';
-            break;
+        $question = "{$num1} {$num2}";
+        while ($num1 !== $num2) {
+            if ($num1 > $num2) {
+                $num1 -= $num2;
+            } else {
+                $num2 -= $num1;
+            }
         }
-    }
+        $trueAnswer = $num1;
 
-    line($result);
+        $trueAnswer = (string) $trueAnswer;
+
+        return [$question, $trueAnswer];
+    };
+
+    playGame(DESCRIPTION, $task);
 }

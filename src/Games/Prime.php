@@ -22,37 +22,21 @@ function isPrime(int $num): bool
     return true;
 }
 
-function makeTask(): array
-{
-    $num = rand(2, 1000);
-
-    $question = $num;
-
-    if (isPrime($num) === true) {
-        $trueAnswer = 'yes';
-    } else {
-        $trueAnswer = 'no';
-    }
-
-    $result = [$question, $trueAnswer];
-
-    return $result;
-}
-
 function runGamePrime()
 {
-    $name = greeting(DESCRIPTION);
+    $task = function () {
+        $num = rand(2, 1000);
 
-    $result = 'Congratulations, ' . $name . '!';
+        $question = $num;
 
-    for ($i = 0; $i < 3; $i++) {
-        $task = makeTask();
-        $gameResult = playGame($name, $task);
-        if ($gameResult !== true) {
-            $result = "Let's try again, " . $name . '!';
-            break;
+        if (isPrime($num) === true) {
+            $trueAnswer = 'yes';
+        } else {
+            $trueAnswer = 'no';
         }
-    }
 
-    line($result);
+        return [$question, $trueAnswer];
+    };
+
+    playGame(DESCRIPTION, $task);
 }
