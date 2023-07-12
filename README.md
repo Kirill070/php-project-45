@@ -14,6 +14,18 @@
 4. Прогрессия. Поиск пропущенных чисел в последовательности чисел.<br>
 5. Определение простого числа.<br>
 
+## Требования к игре:
+
+* Ubuntu Linux (https://ubuntu.com/)
+* PHP версии 8 и выше (https://www.php.net/downloads.php)
+* Composer (https://getcomposer.org/download/)
+* Утилита Make
+```sh
+$ $sudo apt update
+$ $sudo apt install make
+```
+
+
 ## Установка:
 
 ```sh
@@ -37,8 +49,25 @@ $ make brain-progression
 
 $ make brain-prime
 ```
-[Запись примера игры "Проверка на четность"](https://asciinema.org/a/kcDHNqyWRjF3UcjGLKErHaCjO)<br>
-[Запись примера игры "Калькулятор"](https://asciinema.org/a/KlJJM48p5h9rGgza1kZNBfwph)<br>
-[Запись примера игры "НОД"](https://asciinema.org/a/2Nk5RC2QLCk0FGdWWCpkposXM)<br>
-[Запись примера игры "Арифметическая прогрессия"](https://asciinema.org/a/3nByU7TZo4tLdx5v4To6JpImI)<br>
-[Запись игры "Простое ли число?"](https://asciinema.org/a/wcozF1Ct4taSWC4mOyS9orVfC)<br>
+
+## Записи примеров игр:
+
+### "Проверка на четность"
+
+[![asciicast](https://asciinema.org/a/kcDHNqyWRjF3UcjGLKErHaCjO.svg)](https://asciinema.org/a/kcDHNqyWRjF3UcjGLKErHaCjO)
+
+### "Калькулятор"
+
+[![asciicast](https://asciinema.org/a/Ivy67npCEWYjEgb5r3EAGwgMA.svg)](https://asciinema.org/a/Ivy67npCEWYjEgb5r3EAGwgMA)
+
+### "НОД"
+
+[![asciicast](https://asciinema.org/a/6a5xtge0wKIPIqPwCjEAHRE2j.svg)](https://asciinema.org/a/6a5xtge0wKIPIqPwCjEAHRE2j)
+
+### "Арифметическая прогрессия"
+
+[![asciicast](https://asciinema.org/a/MSe5pXTyxQgbFIPHFj8NAkawP.svg)](https://asciinema.org/a/MSe5pXTyxQgbFIPHFj8NAkawP)
+
+### "Простое ли число?"
+
+[![asciicast](https://asciinema.org/a/wcozF1Ct4taSWC4mOyS9orVfC.svg)](https://asciinema.org/a/wcozF1Ct4taSWC4mOyS9orVfC)
