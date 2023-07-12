@@ -26,11 +26,7 @@ function runGamePrime(): void
 
         $question = $num;
 
-        if (isPrime($num) === true) {
-            $correctAnswer = 'yes';
-        } else {
-            $correctAnswer = 'no';
-        }
+        $correctAnswer = (isPrime($num)) ? 'yes' : 'no';
 
         return [$question, $correctAnswer];
     };
