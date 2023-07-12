@@ -14,7 +14,7 @@ function runGameProg(): void
         $step = rand(1, 5);
         $arraySize = rand(4, 9);
 
-        for ($i = 0; $i < $arraySize; $i++) {
+        for ($i = 0; $i < $arraySize; $i += 1) {
             $array[] = $array[$i] + $step;
         }
 

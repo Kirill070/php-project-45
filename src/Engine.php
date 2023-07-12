@@ -12,7 +12,7 @@ function playGame(string $greeting, callable $game): void
     line("Hello, %s!", $name);
     line($greeting);
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i += 1) {
         [$question, $trueAnswer] = $game();
         line('Question: %s', $question);
         $userAnswer = prompt('Your answer');
