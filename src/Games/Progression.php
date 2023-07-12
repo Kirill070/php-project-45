@@ -1,10 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Prog;
+namespace BrainGames\Games\Prog;
 
-use function cli\line;
-use function cli\prompt;
-use function Hexlet\Code\Engine\playGame;
+use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 

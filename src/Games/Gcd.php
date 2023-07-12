@@ -1,10 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Gcd;
+namespace BrainGames\Games\Gcd;
 
-use function cli\line;
-use function cli\prompt;
-use function Hexlet\Code\Engine\playGame;
+use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 

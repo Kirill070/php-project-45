@@ -1,10 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Calc;
+namespace BrainGames\Games\Calc;
 
-use function cli\line;
-use function cli\prompt;
-use function Hexlet\Code\Engine\playGame;
+use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'What is the result of the expression?';
 

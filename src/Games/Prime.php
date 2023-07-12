@@ -1,10 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Prime;
+namespace BrainGames\Games\Prime;
 
-use function cli\line;
-use function cli\prompt;
-use function Hexlet\Code\Engine\playGame;
+use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

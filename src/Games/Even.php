@@ -1,10 +1,8 @@
 <?php
 
-namespace Hexlet\Code\Even;
+namespace BrainGames\Games\Even;
 
-use function cli\line;
-use function cli\prompt;
-use function Hexlet\Code\Engine\playGame;
+use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
