@@ -20,11 +20,11 @@ function runGameGcd(): void
                 $num2 -= $num1;
             }
         }
-        $trueAnswer = $num1;
+        $correctAnswer = $num1;
 
-        $trueAnswer = (string) $trueAnswer;
+        $correctAnswer = (string) $correctAnswer;
 
-        return [$question, $trueAnswer];
+        return [$question, $correctAnswer];
     };
 
     playGame(DESCRIPTION, $task);

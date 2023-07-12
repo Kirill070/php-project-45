@@ -13,9 +13,9 @@ function runGameEven(): void
 
         $question = $num;
 
-        $trueAnswer = ($num % 2 === 0) ? 'yes' : 'no';
+        $correctAnswer = ($num % 2 === 0) ? 'yes' : 'no';
 
-        return [$question, $trueAnswer];
+        return [$question, $correctAnswer];
     };
 
     playGame(DESCRIPTION, $task);

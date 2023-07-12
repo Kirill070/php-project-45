@@ -13,14 +13,14 @@ function playGame(string $greeting, callable $game): void
     line($greeting);
 
     for ($i = 0; $i < 3; $i += 1) {
-        [$question, $trueAnswer] = $game();
+        [$question, $correctAnswer] = $game();
         line('Question: %s', $question);
         $userAnswer = prompt('Your answer');
 
-        if ($userAnswer === $trueAnswer) {
+        if ($userAnswer === $correctAnswer) {
             line('Correct!');
         } else {
-            line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $trueAnswer . "'");
+            line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $correctAnswer . "'");
             line("Let's try again, %s!", $name);
 
             return;

@@ -16,20 +16,20 @@ function runGameCalc(): void
         switch ($operation) {
             case 1:
                 $question = "{$num1} + {$num2}";
-                $trueAnswer = $num1 + $num2;
+                $correctAnswer = $num1 + $num2;
                 break;
             case 2:
                 $question = "{$num1} - {$num2}";
-                $trueAnswer = $num1 - $num2;
+                $correctAnswer = $num1 - $num2;
                 break;
             case 3:
                 $question = "{$num1} * {$num2}";
-                $trueAnswer = $num1 * $num2;
+                $correctAnswer = $num1 * $num2;
                 break;
         }
 
-        $trueAnswer = (string) $trueAnswer;
-        return [$question, $trueAnswer];
+        $correctAnswer = (string) $correctAnswer;
+        return [$question, $correctAnswer];
     };
 
     playGame(DESCRIPTION, $task);

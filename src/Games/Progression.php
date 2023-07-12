@@ -20,15 +20,15 @@ function runGameProg(): void
 
         $rndNum = rand(0, count($array) - 1);
 
-        $trueAnswer = $array[$rndNum];
+        $correctAnswer = $array[$rndNum];
 
         $array[$rndNum] = '..';
 
         $question = implode(' ', $array);
 
-        $trueAnswer = (string) $trueAnswer;
+        $correctAnswer = (string) $correctAnswer;
 
-        return [$question, $trueAnswer];
+        return [$question, $correctAnswer];
     };
 
     playGame(DESCRIPTION, $task);

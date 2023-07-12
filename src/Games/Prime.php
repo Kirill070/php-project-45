@@ -27,12 +27,12 @@ function runGamePrime(): void
         $question = $num;
 
         if (isPrime($num) === true) {
-            $trueAnswer = 'yes';
+            $correctAnswer = 'yes';
         } else {
-            $trueAnswer = 'no';
+            $correctAnswer = 'no';
         }
 
-        return [$question, $trueAnswer];
+        return [$question, $correctAnswer];
     };
 
     playGame(DESCRIPTION, $task);
