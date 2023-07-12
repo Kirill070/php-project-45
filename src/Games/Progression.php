@@ -6,9 +6,9 @@ use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function runGameProg()
+function runGameProg(): void
 {
-    $task = function () {
+    $task = function (): array {
         $firstNum = rand(1, 10);
         $array = [$firstNum];
         $step = rand(1, 5);

@@ -6,9 +6,9 @@ use function BrainGames\Engine\playGame;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function runGameCalc()
+function runGameCalc(): void
 {
-    $task = function () {
+    $task = function (): array {
         $num1 = rand(1, 99);
         $num2 = rand(1, 99);
         $operation = rand(1, 3);

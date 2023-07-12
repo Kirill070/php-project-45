@@ -19,9 +19,9 @@ function isPrime(int $num): bool
     return true;
 }
 
-function runGamePrime()
+function runGamePrime(): void
 {
-    $task = function () {
+    $task = function (): array {
         $num = rand(2, 1000);
 
         $question = $num;
