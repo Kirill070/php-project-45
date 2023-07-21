@@ -2,44 +2,42 @@
 
 namespace BrainGames\Games\Calc;
 
+use Exception;
+
 use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function gameTask(): array
+function calc(int $num1, int $num2, string $sing): string
 {
-    $num1 = rand(1, 99);
-    $num2 = rand(1, 99);
-    $operation = rand(1, 3);
-
-    switch ($operation) {
-        case 1:
-            $question = "{$num1} + {$num2}";
-            $correctAnswer = $num1 + $num2;
-            break;
-        case 2:
-            $question = "{$num1} - {$num2}";
-            $correctAnswer = $num1 - $num2;
-            break;
-        case 3:
-            $question = "{$num1} * {$num2}";
-            $correctAnswer = $num1 * $num2;
-            break;
+    switch ($sing) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        default:
+            throw new Exception("Error! Invalid math operator: $sing");
     }
-
-    $correctAnswer = (string) $correctAnswer;
-
-    return [$question, $correctAnswer];
 }
 
-function runGameCalc(): void
+function runCalc(): void
 {
     $game = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
-        $game[] = gameTask();
+        $num1 = rand(1, 99);
+        $num2 = rand(1, 99);
+        $operators = ['+', '-', '*'];
+
+        $sing = $operators[rand(0, 2)];
+        $question = "$num1 $sing $num2";
+        $correctAnswer = calc($num1, $num2, $sing);
+
+        $game[] = [$question, $correctAnswer];
     }
 
     playGame(DESCRIPTION, $game);

@@ -21,7 +21,7 @@ function isPrime(int $num): bool
     return true;
 }
 
-function runGamePrime(): void
+function runPrime(): void
 {
     $game = [];
 

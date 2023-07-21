@@ -13,13 +13,13 @@ function isEven(int $num): bool
     return ($num % 2 === 0);
 }
 
-function runGameEven(): void
+function runEven(): void
 {
     $game = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $num = rand(1, 99);
-        $correctAnswer = (isEven($num)) ? 'yes' : 'no';
+        $correctAnswer = isEven($num) ? 'yes' : 'no';
 
         $game[] = [$num, $correctAnswer];
     }

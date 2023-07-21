@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\Prog;
+namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\playGame;
 
@@ -8,36 +8,37 @@ use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function gameTask(): array
+function getProgression(): array
 {
     $firstNum = rand(1, 10);
-    $array = [$firstNum];
+    $progression = [$firstNum];
     $step = rand(1, 5);
-    $arraySize = rand(4, 9);
+    $progressionSize = rand(4, 9);
 
-    for ($i = 0; $i < $arraySize; $i += 1) {
-        $array[] = $array[$i] + $step;
+    for ($i = 0; $i < $progressionSize; $i += 1) {
+        $progression[] = $progression[$i] + $step;
     }
 
-    $rndNum = rand(0, count($array) - 1);
-
-    $correctAnswer = $array[$rndNum];
-
-    $array[$rndNum] = '..';
-
-    $question = implode(' ', $array);
-
-    $correctAnswer = (string) $correctAnswer;
-
-    return [$question, $correctAnswer];
+    return $progression;
 }
 
-function runGameProg(): void
+function runProgression(): void
 {
     $game = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
-        $game[] = gameTask();
+        $progression = getProgression();
+
+        $rndNum = rand(0, count($progression) - 1);
+
+        $correctAnswer = $progression[$rndNum];
+
+        $progression[$rndNum] = '..';
+
+        $question = implode(' ', $progression);
+        $correctAnswer = (string) $correctAnswer;
+
+        $game[] = [$question, $correctAnswer];
     }
 
     playGame(DESCRIPTION, $game);

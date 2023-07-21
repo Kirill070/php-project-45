@@ -8,12 +8,8 @@ use const BrainGames\Engine\NUMBER_OF_ROUNDS;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function gameTask(): array
+function getGcd(int $num1, int $num2): string
 {
-    $num1 = rand(1, 99);
-    $num2 = rand(1, 99);
-
-    $question = "{$num1} {$num2}";
     while ($num1 !== $num2) {
         if ($num1 > $num2) {
             $num1 -= $num2;
@@ -21,19 +17,22 @@ function gameTask(): array
             $num2 -= $num1;
         }
     }
-    $correctAnswer = $num1;
 
-    $correctAnswer = (string) $correctAnswer;
-
-    return [$question, $correctAnswer];
+    return $num1;
 }
 
-function runGameGcd(): void
+function runGcd(): void
 {
     $game = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
-        $game[] = gameTask();
+        $num1 = rand(1, 99);
+        $num2 = rand(1, 99);
+
+        $question = "$num1 $num2";
+        $correctAnswer = getGcd($num1, $num2);
+
+        $game[] = [$question, $correctAnswer];
     }
 
     playGame(DESCRIPTION, $game);

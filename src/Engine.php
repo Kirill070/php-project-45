@@ -18,14 +18,13 @@ function playGame(string $description, array $game): void
         line('Question: %s', $question);
         $userAnswer = prompt('Your answer');
 
-        if ($userAnswer === $correctAnswer) {
-            line('Correct!');
-        } else {
+        if ($userAnswer !== $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $correctAnswer);
             line("Let's try again, %s!", $name);
 
             return;
         }
+        line('Correct!');
     }
-        line("Congratulations, %s!", $name);
+    line("Congratulations, %s!", $name);
 }

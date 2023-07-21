@@ -21,8 +21,8 @@
 * Composer (https://getcomposer.org/download/)
 * Утилита Make
 ```sh
-$ $sudo apt update
-$ $sudo apt install make
+$ sudo apt update
+$ sudo apt install make
 ```
 
 
