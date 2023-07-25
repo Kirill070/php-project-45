@@ -30,7 +30,7 @@ function runPrime(): void
 
         $question = $num;
 
-        $correctAnswer = (isPrime($num)) ? 'yes' : 'no';
+        $correctAnswer = isPrime($num) ? 'yes' : 'no';
 
         $gameData[] = [$question, $correctAnswer];
     }

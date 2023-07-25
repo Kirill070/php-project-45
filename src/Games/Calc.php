@@ -31,8 +31,9 @@ function runCalc(): void
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $num1 = rand(1, 99);
         $num2 = rand(1, 99);
+        $operations = ['+', '-', '*'];
 
-        $sing = ['+', '-', '*'][rand(0, 2)];
+        $sing = $operations[array_rand($operations)];
         $question = "$num1 $sing $num2";
         $correctAnswer = calc($num1, $num2, $sing);
 
