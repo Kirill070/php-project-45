@@ -10,19 +10,19 @@ const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 function isEven(int $num): bool
 {
-    return ($num % 2 === 0);
+    return $num % 2 === 0;
 }
 
 function runEven(): void
 {
-    $game = [];
+    $gameData = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $num = rand(1, 99);
         $correctAnswer = isEven($num) ? 'yes' : 'no';
 
-        $game[] = [$num, $correctAnswer];
+        $gameData[] = [$num, $correctAnswer];
     }
 
-    playGame(DESCRIPTION, $game);
+    playGame(DESCRIPTION, $gameData);
 }

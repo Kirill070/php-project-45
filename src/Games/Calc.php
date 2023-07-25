@@ -26,19 +26,18 @@ function calc(int $num1, int $num2, string $sing): string
 
 function runCalc(): void
 {
-    $game = [];
+    $gameData = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $num1 = rand(1, 99);
         $num2 = rand(1, 99);
-        $operators = ['+', '-', '*'];
 
-        $sing = $operators[rand(0, 2)];
+        $sing = ['+', '-', '*'][rand(0, 2)];
         $question = "$num1 $sing $num2";
         $correctAnswer = calc($num1, $num2, $sing);
 
-        $game[] = [$question, $correctAnswer];
+        $gameData[] = [$question, $correctAnswer];
     }
 
-    playGame(DESCRIPTION, $game);
+    playGame(DESCRIPTION, $gameData);
 }

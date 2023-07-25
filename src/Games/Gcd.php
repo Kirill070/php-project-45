@@ -23,7 +23,7 @@ function getGcd(int $num1, int $num2): string
 
 function runGcd(): void
 {
-    $game = [];
+    $gameData = [];
 
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i += 1) {
         $num1 = rand(1, 99);
@@ -32,8 +32,8 @@ function runGcd(): void
         $question = "$num1 $num2";
         $correctAnswer = getGcd($num1, $num2);
 
-        $game[] = [$question, $correctAnswer];
+        $gameData[] = [$question, $correctAnswer];
     }
 
-    playGame(DESCRIPTION, $game);
+    playGame(DESCRIPTION, $gameData);
 }
